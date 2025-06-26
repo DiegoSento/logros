@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    line-height: 1.6;
+}
+
+.dashboard {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Marca de agua */
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    font-weight: bold;
+    color: #f1f5f9;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+.header {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #06b6d4;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    max-width: 500px;
+}
+
+.orange-text { color: #f97316; font-weight: 600; }
+.gray-text { color: #9ca3af; }
+.blue-text { color: #1e40af; font-weight: 600; }
+.red-text { color: #ef4444; }
+.green-text { color: #10b981; }
+
+/* Template section */
+.template-section {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.diego-circle {
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+    animation: float 3s ease-in-out infinite;
+}
+
+.diego-circle span {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    margin-right: 140px;
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.novedades-card {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    border-left: 4px solid #06b6d4;
+}
+
+.logros-card {
+    grid-column: 2;
+    grid-row: 1;
+    border-top: 4px solid #10b981;
+}
+
+.metas-card {
+    grid-column: 2;
+    grid-row: 2;
+    border-bottom: 4px solid #8b5cf6;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-header i {
+    font-size: 1.2rem;
+}
+
+.card-header h2 {
+    color: #1e40af;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.novedades-card .card-header i { color: #06b6d4; }
+.logros-card .card-header i { color: #10b981; }
+.metas-card .card-header i { color: #8b5cf6; }
+
+.card-content p {
+    color: #374151;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.achievement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    background: #f9fafb;
+    transition: background 0.3s ease;
+}
+
+.achievement-item:hover {
+    background: #f3f4f6;
+}
+
+.achievement-item i.green { color: #10b981; }
+.achievement-item i.blue { color: #3b82f6; }
+.achievement-item i.orange { color: #f97316; }
+.achievement-item i.yellow { color: #e2f916; }
+
+.badge {
+    background: #e5e7eb;
+    color: #374151;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.goals-list {
+    list-style: none;
+    font-size: 0.85rem;
+}
+
+.goals-list li {
+    padding: 0.3rem 0;
+    color: #374151;
+    transition: color 0.3s ease;
+}
+
+.goals-list li:hover {
+    color: #8b5cf6;
+}
+
+/* Logo sento */
+.sento-logo {
+    position:fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sento-logo span {
+    color: #1e40af;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.dots {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.dot-1 { background: #0515eb; }
+.dot-2 { background: #f26805; animation-delay: 0.2s; }
+.dot-3 { background: #a608ea; animation-delay: 0.4s; }
+.dot-4 { background: #06b6d4; animation-delay: 0.6s; }
+
+/* Secciones */
+.products-section,
+.charts-section,
+.stats-section {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.products-section h3,
+.charts-section h3,
+.stats-section h3 {
+    color: #374151;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.products-section h3 i { color: #3b82f6; }
+
+/* Galería de productos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.product-card {
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h4 {
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 0.3rem;
+}
+
+.product-info p {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-badge {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+/* Gráficas */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.chart-container {
+    text-align: center;
+}
+
+.chart-container h3 {
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+    height: 250px !important;
+}
+
+/* Estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.blue-stat { background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); }
+.green-stat { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); }
+.orange-stat { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); }
+.purple-stat { background: linear-gradient(135deg, #e9d5ff 0%, #ddd6fe 100%); }
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.blue-stat .stat-number { color: #2563eb; }
+.green-stat .stat-number { color: #059669; }
+.orange-stat .stat-number { color: #d97706; }
+.purple-stat .stat-number { color: #7c3aed; }
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* Animaciones */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+    0%, 100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out; /* Sale del suelo con facilidad */
+    }
+
+    /* Punto más alto del primer rebote (el principal) */
+    50% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-in; /* Cae acelerando por la gravedad */
+    }
+
+    /* Punto más alto del segundo rebote (más pequeño) */
+    80% {
+        transform: translateY(-5px);
+        animation-timing-function: ease-in; /* Cae de nuevo */
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        margin-right: 0;
+    }
+    
+    .novedades-card {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    
+    .diego-circle {
+        position: static;
+        margin: 0 auto 1rem;
+    }
+    
+    .charts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .watermark {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

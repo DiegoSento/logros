@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logros y Retos - Dashboard de Calidad</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Marca de agua -->
+         
+        <div class="watermark">PROPÓSITO</div>
+
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="main-title">LOGROS Y RETOS</h1>
+                <div class="subtitle">
+                    <span class="orange-text">DANDO VISIBILIDAD A LO QUE HACEMOS</span>
+                    <span class="gray-text"> podemos generar impacto y cercanía</span>
+                    <span class="blue-text"> en todos los procesos.</span>
+                </div>
+            </header>
+
+            <!-- Template principal -->
+            <div class="template-section">
+                <!-- Círculo Diego -->
+                <div class="diego-circle">
+                    <span>DIEGO</span>
+                </div>
+
+                <!-- Cards container -->
+                <div class="cards-container">
+                    <!-- Novedades -->
+                    <div class="card novedades-card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h2>Novedades.</h2>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Contexto:</strong> Completamos 3 líneas de productos con <strong class="orange-text">1317 unidades</strong> totales.</p>
+                            <p><strong class="red-text">Dificultades:</strong> .
+                                <ul class="goals-list">
+                                <li>- Optimización de tiempos</li>
+                                <li>- Procesos incompletos por parte del cliente</li>
+                                <li>- Componentes erroneos</li>
+                              </ul>
+                            </p>
+                            <p><strong class="green-text">Oportunidades:</strong> 
+                                <ul class="goals-list">
+                                    <li>- Creacion de estandares nuevos</li>
+                                    <li>- Nuevos protocolos de calidad.</li>
+                                    <li>- Comunicacione con otras areas </li>
+                                  </ul></p>
+                        </div>
+                    </div>
+                    <!-- Logros del mes -->
+                    <div class="card logros-card">
+                        <div class="card-header">
+                            <i class="fas fa-trophy"></i>
+                            <h2>Qué logré este mes.</h2>
+                        </div>
+                        <div class="card-content">
+                            <p>Gestionamos alta producción con 3 productos. Mayor desafío: calidad en <strong class="blue-text">Bender</strong>.</p>
+                            <div class="achievements">
+                                <div class="achievement-item">
+                                    <span><i class="fas fa-check-circle green"></i> Bender</span>
+                                    <span class="badge">800 unidades</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span><i class="fas fa-check-circle blue"></i> Fracttal</span>
+                                    <span class="badge">501 unidades</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span><i class="fas fa-check-circle orange"></i> Asimetrix</span>
+                                    <span class="badge">16 unidades</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span><i class="fas fa-check-circle yellow"></i> Reparaciones y despachos</span>
+                                    <span class="badge">25 unidades</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metas próximo mes -->
+                    <div class="card metas-card">
+                        <div class="card-header">
+                            <i class="fas fa-bullseye"></i>
+                            <h2>Qué quiero lograr el otro mes.</h2>
+                        </div>
+                        <div class="card-content">
+                            <p>Próximos pasos y enfoque del siguiente mes:</p>
+                            <ul class="goals-list">
+                                <li>🎯 Mayor comunicacion con compras</li>
+                                <li>🎯 Reducir inspección 15% en Fracttal</li>
+                                <li>🎯 Herramientas para Fracttal</li>
+                                <li>🎯 Actualizacion en estándares Bender</li>
+                                <li>🎯 Manual fotográfico de calidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logo sento -->
+
+            <div class="sento-logo"><br>
+                <span>sento</span>
+                <div class="dots">
+                    <div class="dot dot-1"></div>
+                    <div class="dot dot-2"></div>
+                    <div class="dot dot-3"></div>
+                    <div class="dot dot-4"></div>
+                </div>
+            </div>
+
+            <!-- Galería de productos -->
+            <section class="products-section">
+                <h3><i class="fas fa-microchip"></i> Productos Manufacturados</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="/imag/ben.jpg" alt="Bender">
+                        <div class="product-info">
+                            <h4>Bender</h4>
+                            <p>Dispositivo de hidratación en orina</p>
+                            <span class="product-badge">800 unidades</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/imag/fra.jpg" alt="Fracttal">
+                        <div class="product-info">
+                            <h4>Fracttal</h4>
+                            <p>Sensor Modbus industrial</p>
+                            <span class="product-badge">501 unidades</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/imag/asi.jpg" alt="Asimetrix">
+                        <div class="product-info">
+                            <h4>Asimetrix</h4>
+                            <p>Dispositivo de medición avanzado</p>
+                            <span class="product-badge">16 unidades</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráficas -->
+            <section class="charts-section">
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3><i class="fas fa-chart-bar"></i> Producción por Producto</h3>
+                        <canvas id="barChart" width="400" height="300"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3><i class="fas fa-chart-pie"></i> Distribución de Producción</h3>
+                        <canvas id="pieChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resumen estadístico -->
+            <section class="stats-section">
+                <h3>Resumen del Mes</h3>
+                <div class="stats-grid">
+                    <div class="stat-card blue-stat">
+                        <div class="stat-number">1317 </div>
+                        <div class="stat-label">Total Nuevas Unidades</div>
+                    </div>
+                    <div class="stat-card green-stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Líneas de Producto</div>
+                    </div>
+                    <div class="stat-card orange-stat">
+                        <div class="stat-number">800</div>
+                        <div class="stat-label">Mayor Volumen</div>
+                    </div>
+                    <div class="stat-card purple-stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Objetivos Cumplidos</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
